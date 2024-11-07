@@ -25,61 +25,15 @@ const Works = () => {
           </span>
           <span>Tools & services</span>
           <spane>
-          <spane>
-  <ul>
-    <li>
-      <h3>Web Development Frameworks:</h3>
-      <ul>
-        <li>Ruby on Rails for back-end and API development</li>
-        <li>ASP.NET and Blazor for robust, scalable web applications</li>
-      </ul>
-    </li>
-    
-    <li>
-      <h3>Front-End Technologies:</h3>
-      <ul>
-        <li>JavaScript and its libraries (Node.js, etc.) for dynamic and responsive front-end solutions</li>
-      </ul>
-    </li>
-    
-    <li>
-      <h3>E-commerce Platforms:</h3>
-      <ul>
-        <li>Shopify and WordPress for custom e-commerce solutions, including integration and customization</li>
-      </ul>
-    </li>
-    
-    <li>
-      <h3>Cloud & Hosting Services:</h3>
-      <ul>
-        <li>AWS for secure, scalable cloud hosting, and infrastructure management</li>
-      </ul>
-    </li>
-    
-    <li>
-      <h3>Database Management:</h3>
-      <ul>
-        <li>SQL and other relational databases for efficient data storage and retrieval</li>
-      </ul>
-    </li>
-    
-    <li>
-      <h3>SEO and Marketing Tools:</h3>
-      <ul>
-        <li>SEO optimization for increased visibility and user engagement</li>
-      </ul>
-    </li>
-    
-    <li>
-      <h3>Support and Maintenance:</h3>
-      <ul>
-        <li>Comprehensive technical support, troubleshooting, and site maintenance</li>
-      </ul>
-    </li>
-  </ul>
-</spane>
-</spane>
-
+            Lorem ispum is simpley dummy text of printing of printing Lorem
+            <br />
+            ispum is simpley dummy text of printingLorem ispum is simpley dummy
+            text
+            <br />
+            y dummy text of printingLorem
+            <br />
+            ispum is simpley dummy text of printing
+          </spane>
           <Link to="contact" smooth={true} spy={true}>
             <button className="button s-button">Hire Me</button>
           </Link>

@@ -9,75 +9,39 @@ import Kuhlmann from "../../img/kuhlmann.png";
 import Sim from '../../img/sim.png';
 import Wifi from '../../img/wifi.png';
 import { themeContext } from "../../Context";
-
 const Portfolio = () => {
-  const swiperConfig = {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    grabCursor: true,
-    breakpoints: {
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 10
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30
-      },
-      1440: {
-        slidesPerView: 4,
-        spaceBetween: 40
-      }
-    }
-  };
-
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
-
   return (
     <div className="portfolio" id="portfolio">
       {/* heading */}
-      <span style={{color: darkMode ? 'white' : ''}}>Recent Projects</span>
+      <span style={{color: darkMode?'white': ''}}>Recent Projects</span>
       <span>Portfolio</span>
 
       {/* slider */}
       <Swiper
+        spaceBetween={30}
+        slidesPerView={3}
+        grabCursor={true}
         className="portfolio-slider"
-        {...swiperConfig}
       >
-        <SwiperSlide>
-          <a href="https://jpsmart.net/" target="_blank" rel="noopener noreferrer">
-            <img src={Sim} alt="Jpsmart" />
-          </a>
+         <SwiperSlide>
+          <img src={Sim} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://wifi.jpmob.jp/rentalspace" target="_blank" rel="noopener noreferrer">
-            <img src={Wifi} alt="Jpwifi" />
-          </a>
+          <img src={Wifi} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://www.startuplady.org/" target="_blank" rel="noopener noreferrer">
-            <img src={Startuplady} alt="Startup lady Japan" />
-          </a>
+          <img src={Startuplady} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://www.aignermunich.jp/" target="_blank" rel="noopener noreferrer">
-            <img src={Ecommerce} alt="Aigner Japan" />
-          </a>
+          <img src={Ecommerce} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://kuhlmannsupply.com/" target="_blank" rel="noopener noreferrer">
-            <img src={Kuhlmann} alt="Kuhlmann Supply" />
-          </a>
+          <img src={Kuhlmann} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://www.bree.jp/" target="_blank" rel="noopener noreferrer">
-            <img src={Bree} alt="Bree Japan" />
-          </a>
+          <img src={Bree} alt="" />
         </SwiperSlide>
       </Swiper>
     </div>

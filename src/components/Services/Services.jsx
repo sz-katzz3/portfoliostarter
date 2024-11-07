@@ -74,7 +74,7 @@ A creative, results-driven approach to every project<br />
             emoji={Picto3}
             heading={"UI/UX"}
             detail={
-              "Canva, Figma, Photoshop"
+              "Lorem ispum dummy text are usually use in section where we need some random text"
             }
             color="rgba(252, 166, 31, 0.45)"
           />

@@ -3,29 +3,25 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 70vh; /* changed from height to min-height for better responsiveness */
-  padding: 2rem 1rem; /* added padding for better spacing on mobile */
-}
+  height: 70vh;
 
+}
 /* heading */
 .portfolio span:nth-of-type(1) {
   color: var(--black);
-  font-size: clamp(1.5rem, 4vw, 2rem); /* responsive font size */
+  font-size: 2rem;
   font-weight: bold;
-  text-align: center; /* better alignment on mobile */
 }
 
 .portfolio span:nth-of-type(2) {
   color: var(--orange);
-  font-size: clamp(2rem, 5vw, 2.5rem); /* responsive font size */
+  font-size: 2.5rem;
   font-weight: bold;
-  text-align: center;
 }
 
 /* slider */
-.portfolio .swiper {
-  overflow: visible !important;
-  padding: 1rem 0; /* added padding for better mobile display */
+.portfolio .swiper{
+    overflow: visible!important;
 }
 
 .portfolio-slider {
@@ -34,88 +30,11 @@
 }
 
 .portfolio-slider .swiper-slide {
-  width: 100%; /* make slides responsive */
-  max-width: 20rem; /* maintain maximum width */
-  margin: 0 auto; /* center slides */
+  width: 20rem;
 }
-
 .portfolio img {
-  width: 100%; /* make images responsive */
-  max-width: 19rem; /* maintain maximum width */
-  height: auto; /* maintain aspect ratio */
+  width: 19rem;
   filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
   border-radius: 19px;
-  transition: transform 0.3s ease; /* smooth hover effect */
 }
 
-/* Hover effect for desktop */
-@media (hover: hover) {
-  .portfolio img:hover {
-    transform: translateY(-5px);
-  }
-}
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-  .portfolio {
-    padding: 1.5rem 0.5rem;
-  }
-
-  .portfolio-slider {
-    margin-top: 2rem;
-  }
-
-  .portfolio img {
-    filter: drop-shadow(-8px 10px 10px rgba(0, 0, 0, 0.2)); /* lighter shadow for mobile */
-  }
-}
-
-/* Small screens */
-@media screen and (max-width: 480px) {
-  .portfolio {
-    padding: 1rem 0.25rem;
-  }
-
-  .portfolio-slider {
-    margin-top: 1.5rem;
-  }
-
-  .portfolio-slider .swiper-slide {
-    width: 90%; /* slightly smaller width on mobile */
-  }
-}
-
-/* Landscape orientation */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-  .portfolio {
-    min-height: 100vh; /* ensure full height in landscape */
-    padding: 2rem 0;
-  }
-
-  .portfolio-slider {
-    margin-top: 1rem;
-  }
-}
-
-/* Optional: Add Swiper-specific responsive styles */
-@media screen and (min-width: 1024px) {
-  .portfolio .swiper-container {
-    padding: 0 2rem; /* Add space on larger screens */
-  }
-}
-
-/* Optional: Add support for larger screens */
-@media screen and (min-width: 1440px) {
-  .portfolio {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  .portfolio-slider .swiper-slide {
-    width: 22rem; /* slightly larger on big screens */
-  }
-
-  .portfolio img {
-    max-width: 21rem;
-  }
-}
