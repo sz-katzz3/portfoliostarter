@@ -26,10 +26,11 @@
 .portfolio .swiper {
   overflow: visible !important;
   padding: 1rem 0; /* added padding for better mobile display */
+  width: 100%;
 }
 
 .portfolio-slider {
-
+  width: 100%;
 }
 
 .portfolio-slider .swiper-slide {

@@ -4,7 +4,9 @@
   justify-content: space-between;
   margin-bottom: 2rem;
   top: 0;
+  padding: 0 1rem;
 }
+
 .n-left {
   flex: 1;
   align-items: center;
@@ -17,6 +19,7 @@
   font-size: 1.3rem;
   font-weight: bold;
 }
+
 .n-right {
   flex: 1;
   display: flex;
@@ -28,6 +31,7 @@
 .n-list {
   flex: 10;
 }
+
 .n-list > ul {
   display: flex;
   gap: 2rem;
@@ -43,8 +47,34 @@
   flex: 2;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+  .n-wrapper {
+    height: auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .n-left,
+  .n-right {
+    justify-content: center;
+  }
+
   .n-list {
     display: none;
+  }
+
+  .n-button {
+    flex: 1;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .n-name {
+    font-size: 1.1rem;
+  }
+
+  .n-button {
+    flex-basis: auto;
   }
 }
