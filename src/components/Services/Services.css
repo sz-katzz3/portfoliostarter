@@ -1,86 +1,81 @@
 .services {
-  padding: 5rem 1.5rem; /* Reduced padding on smaller screens */
+  padding: 3rem 3rem;
   display: flex;
-  min-height: 70vh; /* Changed to min-height for better responsiveness */
-  margin-bottom: 5rem; /* Reduced margin */
-  margin-top: 5rem; /* Reduced margin */
+  min-height: 30rem;
+  margin: 9rem 0 13rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* left side */
 .awesome {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-  flex: 1;
+  max-width: 50%;
+  padding-right: 2rem;
 }
 
-.awesome > :nth-child(1) {
-  color: var(--black);
-  font-size: clamp(2rem, 4vw, 2.5rem); /* Responsive font size */
-  font-weight: bold;
-}
-.awesome > :nth-child(2) {
-  color: var(--orange);
-  font-size: clamp(2rem, 4vw, 2.5rem); /* Responsive font size */
-  font-weight: bold;
-}
-.awesome > :nth-child(3) {
-  color: var(--gray);
-  font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font size */
-  margin-top: 1rem;
-}
-.s-button {
-  width: 8rem;
-  height: 2rem;
-  margin-top: 1rem;
-}
-
-/* right sided */
 .cards {
   position: relative;
   flex: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  height: 100%;
 }
 
 .cards > * {
-  position: static;
+  position: absolute;
+  width: 250px;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-/* blur */
-.s-blur2 {
-  display: none; /* Removed the blurs on smaller screens */
-}
-
-.s-blur1 {
-  display: none; /* Removed the blurs on smaller screens */
-}
+/* Desktop card positioning */
+.cards > :nth-child(1) { top: -1rem; left: -3rem; }
+.cards > :nth-child(2) { top: 12rem; left: 12rem; }
+.cards > :nth-child(3) { top: 19rem; left: -3rem; }
 
 @media screen and (max-width: 768px) {
   .services {
-    flex-direction: column;
-    gap: 5rem;
-    padding: 2rem 1rem;
+    display: block;
+    padding: 2rem 1.5rem;
+    margin: 4rem 0;
   }
 
   .awesome {
-    align-items: center;
-    text-align: center;
+    max-width: 100%;
+    margin-bottom: 3rem;
+    padding-right: 0;
   }
 
   .cards {
-    grid-template-columns: 1fr;
+    display: block;
+    margin-top: 4rem;
+  }
+
+  .cards > * {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 2rem auto;
+    left: 0 !important;
+    top: 0 !important;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .services {
-    padding: 1rem;
-    min-height: auto;
-  }
+.s-button {
+  width: auto;
+  min-width: 10rem;
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  margin: 1rem 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .cards {
-    gap: 10rem;
-  }
+.services a {
+  text-decoration: none;
+  color: inherit;
 }
