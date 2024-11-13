@@ -40,9 +40,12 @@ Ready to build something extraordinary? Let’s make your next project unforgett
         </Link>
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+          <a href="https://github.com/sz-katzz3" target="_blank" rel="noopener noreferrer">
+            <img src={Github} alt="Github" />
+          </a>
+          <a href="https://www.linkedin.com/in/katalin-e-szabo/" target="_blank" rel="noopener noreferrer">
+            <img src={LinkedIn} alt="LinkedIn" />
+          </a>
         </div>
       </div>
       {/* right image side */}
