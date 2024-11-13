@@ -47,14 +47,9 @@ const Works = () => {
         <li>Shopify and WordPress for custom e-commerce solutions, including integration and customization</li>
       </ul>
     </li>
-    
-    <li>
-      <h3>Cloud & Hosting Services:</h3>
-      <ul>
-        <li>AWS for secure, scalable cloud hosting, and infrastructure management</li>
-      </ul>
-    </li>
-    
+  </ul>
+
+  <ul>
     <li>
       <h3>Database Management:</h3>
       <ul>
@@ -76,8 +71,7 @@ const Works = () => {
       </ul>
     </li>
   </ul>
-</spane>
-          <Link to="contact" smooth={true} spy={true}>
+</spane>          <Link to="contact" smooth={true} spy={true}>
             <button className="button s-button">Hire Me</button>
           </Link>
           <div

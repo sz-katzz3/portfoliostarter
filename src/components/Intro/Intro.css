@@ -1,8 +1,15 @@
 .Intro {
   display: flex;
   height: 77vh;
-  margin-top: 6rem;
+  margin: 6rem 3rem 0 3rem;
+  width: 100%;
+  box-sizing: border-box;
+}
 
+@media screen and (max-width: 480px) {
+  .Intro {
+    margin: 6rem 0 0 0;
+  }
 }
 
 /* left side styling */

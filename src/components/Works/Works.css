@@ -2,45 +2,76 @@
   padding: 0 3rem 0 3rem;
   display: flex;
   height: 90vh;
-  margin-top: 4rem;
-
-  /* scroll */
+  margin: 20rem 0 20rem 0;
   align-items: center;
+  gap: 2rem;
+}
+  .w-left {
+    flex: 0.6;
+    height: fit-content;
+  }
+.w-right {
+  flex: 0.4;
 }
 
+@media screen and (max-width: 480px) {
+  .works {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    gap: 5rem;
+  }
+
+  .w-right {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  spane {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
 
 .w-backCircle{
   left: 8rem!important;
 }
-spane {
-  display: block;
-  padding: 1rem;
-  line-height: 1.6;
+.w-left {
+  flex: 0.8;
+  height: fit-content;
 }
 
+spane {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.w-right {
+  margin-left: -12rem;
+}
 spane h3 {
   color: var(--black);
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 1rem 0 0.5rem 0;
+  margin-bottom: 1rem;
 }
 
-/* Style for the lists */
 spane ul {
-  list-style: none; /* Remove default bullets */
-  padding-left: 1.5rem;
-  margin: 0.5rem 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 spane ul li {
-  position: relative;
-  padding-left: 1.5rem;
   margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 /* Custom bullet points */
 spane ul li::before {
-  content: "•"; /* Bullet character */
+  content: ""; /* Bullet character */
   color: var(--orange); /* Use your orange variable color */
   position: absolute;
   left: 0;
@@ -51,19 +82,9 @@ spane ul li::before {
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   spane {
-    padding: 0.5rem;
+    grid-template-columns: 1fr;
   }
-  
-  spane ul {
-    padding-left: 1rem;
-  }
-  
-  spane ul li {
-    padding-left: 1rem;
-  }
-}
-
-/* left side */
+}/* left side */
 .awesome {
   display: flex;
   flex-direction: column;
@@ -97,7 +118,7 @@ spane ul li::before {
 }
 
 .w-mainCircle {
-  left: 9rem;
+  left: 2rem;
   position: relative;
   width: 18rem;
   height: 18rem;
@@ -105,7 +126,6 @@ spane ul li::before {
   box-shadow: var(--smboxShadow);
   top: 2rem;
   background: white;
-  /* darkMode */
   z-index: 2;
 }
 .w-mainCircle > * {
@@ -171,22 +191,29 @@ spane ul li::before {
 @media screen and (max-width: 480px) {
   .works {
     flex-direction: column;
-    height: 55rem;
+    height: auto;
     padding: 0;
     gap: 5rem;
+    margin: 12rem 0;
   }
 
   .w-right {
+    margin-left: 0;
+    margin-top: 4rem;
+    position: relative;
+    width: 100%;
     display: flex;
-    align-items: flex-start;
-    justify-content:start;
-    transform: scale(0.7);
-  }
-  .w-mainCircle{
-    position: static;
-  }
-  .w-backCircle{
-    left: 8rem!important;
+    align-items: center;
+    justify-content: center;
   }
 
+  .w-mainCircle {
+    position: static;
+    transform: scale(0.7);
+  }
+
+  spane {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }

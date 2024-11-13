@@ -36,7 +36,10 @@
 
 @media screen and (max-width: 768px) {
   .services {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 2rem 1.5rem;
     margin: 4rem 0;
   }
@@ -45,24 +48,26 @@
     max-width: 100%;
     margin-bottom: 3rem;
     padding-right: 0;
+    align-items: center;
   }
 
   .cards {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 4rem;
+    width: 100%;
   }
 
   .cards > * {
     position: relative;
-    display: block;
     width: 100%;
     max-width: 300px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     left: 0 !important;
     top: 0 !important;
   }
 }
-
 .s-button {
   width: auto;
   min-width: 10rem;
@@ -78,4 +83,10 @@
 .services a {
   text-decoration: none;
   color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .s-blur2 {
+    display: none;
+  }
 }

@@ -18,9 +18,6 @@ import Resume from './resume.pdf';
       type: "spring",
     };
 
-    // Add this at the top of your component
-    const isMobile = window.innerWidth <= 768;
-
     return (
       <div className="services" id="services">
         {/* left side */}
@@ -33,7 +30,7 @@ import Resume from './resume.pdf';
   Scalable cloud solutions powered by AWS<br />
   User-friendly, high-performance websites and applications<br />
   A creative, results-driven approach to every project<br />
-         
+       
           </spane>
           <a href={Resume} download>
             <button className="button s-button">Download CV</button>
@@ -81,7 +78,8 @@ import Resume from './resume.pdf';
               color="rgba(252, 166, 31, 0.45)"
               link="#contact"
             />
-          </motion.div>          <div
+          </motion.div>
+          <div
             className="blur s-blur2"
             style={{ background: "var(--purple)" }}
           ></div>

@@ -1,25 +1,31 @@
 .portfolio {
+  padding: 3rem 3rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  min-height: 70vh; /* changed from height to min-height for better responsiveness */
-  padding: 2rem 1rem; /* added padding for better spacing on mobile */
+  align-items: center;
+  margin: 6rem 0;
 }
 
-/* heading */
-.portfolio span:nth-of-type(1) {
-  color: var(--black);
-  font-size: clamp(1.5rem, 4vw, 2rem); /* responsive font size */
+.portfolio span {
   font-weight: bold;
-  text-align: center; /* better alignment on mobile */
+  font-size: 3rem;
 }
 
 .portfolio span:nth-of-type(2) {
+  margin-bottom: 4rem;
+  display: block;
   color: var(--orange);
-  font-size: clamp(2rem, 5vw, 2.5rem); /* responsive font size */
-  font-weight: bold;
-  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio {
+    padding: 2rem 1rem;
+    margin: 3rem 0;
+  }
+
+  .portfolio span:nth-of-type(2) {
+    margin-bottom: 2.5rem;
+  }
 }
 
 /* slider */

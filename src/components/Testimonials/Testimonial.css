@@ -1,106 +1,138 @@
 .t-wrapper {
-    padding: 5rem 1.5rem; /* Reduced padding on smaller screens */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
-    position: relative;
-    min-height: 80vh; /* Changed to min-height for better responsiveness */
-  }
-  
+  padding: clamp(2rem, 5vw, 5rem) 0;  /* Removed horizontal padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: clamp(1rem, 3vw, 2rem);
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.t-heading {
+  align-self: start;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.t-heading > * {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.t-heading span:nth-of-type(2) {
+  color: var(--orange);
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  width: 100%;
+  max-width: 35rem;
+  min-height: 15rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 5px solid var(--blueCard);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial > img {
+  width: clamp(4rem, 8vw, 6rem);
+  height: clamp(4rem, 8vw, 6rem);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--orange);
+  margin-bottom: 1rem;
+}
+
+.testimonial > span {
+  color: var(--gray);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  text-align: center;
+  max-width: 90%;
+}
+
+.t-wrapper .swiper {
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+}
+
+.t-wrapper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.t-wrapper .swiper-slide-active {
+  opacity: 1;
+}
+
+.t-wrapper .swiper-pagination {
+  margin-top: 2rem;
+}
+
+.t-wrapper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--gray);
+  opacity: 0.5;
+}
+
+.t-wrapper .swiper-pagination-bullet-active {
+  background: var(--orange);
+  opacity: 1;
+}
+
+/* Add these styles to ensure perfect centering */
+.t-wrapper .swiper {
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-wrapper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important; /* Forces full width */
+}
+
+@media screen and (max-width: 768px) {
   .t-heading {
-    align-self: start;
-    width: 100%;
+    align-self: center;
+    text-align: center;
   }
-  
-  .t-heading > * {
-    font-size: clamp(1.8rem, 4vw, 2.2rem); /* Responsive font size */
-    font-weight: bold;
-  }
-  
-  .t-heading span:nth-of-type(2) {
-    color: var(--orange);
-  }
-  
-  .t-blur1 {
-    display: none; /* Removed the blurs on smaller screens */
-  }
-  
-  .t-blur2 {
-    display: none; /* Removed the blurs on smaller screens */
-  }
-  
+
   .testimonial {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 2rem;
-    width: 100%;
-    max-width: 30rem;
-    height: 12rem;
-    background: rgba(255, 255, 255, 0.26);
-    border: 7px solid var(--blueCard);
-    box-shadow: var(--boxShadow);
-    border-radius: 20px;
-  }
-  
-  .testimonial > img {
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 100%;
-  }
-  
-  .testimonial > span {
-    color: var(--gray);
-    font-size: clamp(0.7rem, 3vw, 0.9rem); /* Responsive font size */
-  }
-  
-  /* slider */
-  .t-wrapper .swiper {
-    width: 100%;
-    height: 70%;
+    width: 85%;
+    margin: 0 auto;
   }
   
   .t-wrapper .swiper-slide {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
-  
-  .t-wrapper .swiper-pagination-bullet-active {
-    background: var(--orange);
+}
+@media screen and (max-width: 480px) {
+  .testimonial {
+    width: 90%;
   }
-  
-  @media screen and (max-width: 768px) {
-    .t-wrapper {
-      padding: 2rem 1rem;
-      min-height: auto;
-    }
-  
-    .t-heading {
-      align-self: center;
-      text-align: center;
-    }
-  
-    .testimonial {
-      max-width: 100%;
-    }
-  
-    .testimonial > img {
-      width: 3.5rem;
-      height: 3.5rem;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .t-wrapper {
-      padding: 1rem;
-    }
-  
-    .testimonial > img {
-      width: 3rem;
-      height: 3rem;
-    }
-  }
+}
