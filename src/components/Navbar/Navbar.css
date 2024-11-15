@@ -4,7 +4,11 @@
   justify-content: space-between;
   margin-bottom: 2rem;
   top: 0;
-  padding: 0 1rem;
+  padding: 0 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  z-index: 999;
 }
 
 .n-left {
@@ -16,8 +20,20 @@
 }
 
 .n-name {
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: bold;
+  color: var(--orange);
+}
+
+.n-list > ul {
+  font-size: 1.2rem;
+}
+
+.n-list > ul :hover {
+  color: var(--orange);
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
 }
 
 .n-right {

@@ -14,14 +14,22 @@
   flex: 0.4;
 }
 
+.works {
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  height: 90vh;
+  margin: 9rem 0 9rem 0;
+  align-items: center;
+}
+
 @media screen and (max-width: 480px) {
   .works {
     flex-direction: column;
     height: auto;
     padding: 0;
     gap: 5rem;
+    margin: 4rem 0 4rem 0;
   }
-
   .w-right {
     margin-left: 0;
     margin-top: 2rem;
